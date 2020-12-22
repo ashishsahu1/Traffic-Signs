@@ -1,9 +1,33 @@
 from flask import Flask, render_template
-app = Flask(__name__)
+from keras.models import load_model
 
-@app.route('/')
-def hello_world():
-    return render_template('index.html')
+# app = Flask(__name__)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+model = load_model('Model/Outputs/finalModel.h5')
+
+
+
+
+
+
+
+
+
+
+
+
+# @app.route('/')
+# def hello_world():
+#     return render_template('index.html')
+
+
+
+
+
+
+
+
+# if __name__ == "__main__":
+#     app.run(debug=True)
+
+
