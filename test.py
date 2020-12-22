@@ -56,6 +56,7 @@ classes = { 1:'Speed limit (20km/h)',
 
 
 
+from sklearn.metrics import accuracy_score
 # import the opencv library 
 import cv2 
 import numpy as np
