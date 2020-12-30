@@ -2,8 +2,7 @@ from flask import Flask, render_template
 # from keras.models import load_model
 import os
 
-uploadDir = 'static/img/input'
-allowedExt = {'png'}
+
 app = Flask(__name__)
 
 # model = load_model('Model/Outputs/finalModel.h5')
