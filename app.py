@@ -10,7 +10,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_PATH'] = 16 * 1024 * 1024
 app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 1
 
-model = load_model('Model/Outputs/finalModel.h5')
+model = load_model('Model/Outputs/model-1.h5')
 
 
 @app.route('/')
@@ -27,7 +27,7 @@ def home():
     image = np.expand_dims(img1, axis=0)
     img = np.array(image)
     pred = model.predict_classes([image])[0]
-    clas = pred+1
+    clas = pred
     return render_template('pred.html',clas=clas)
 
 
