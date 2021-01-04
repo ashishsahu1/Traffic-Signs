@@ -6,10 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
-        <label for="img">Select image:</label>
-        <input type="file" id="img" name="img" accept="image/*">
-        <input type="submit">
-    </form>
+    <center>
+        <div class="cont">
+            <h2>Traffic Signal</h2>
+        </div>
+
+        <form method="POST" action="{{url_for('home')}}" enctype="multipart/form-data">
+            <input type="file" name="image" class="btn">
+            <input type="submit" class="btn">
+        </form>
+    </center>
 </body>
 </html>
