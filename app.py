@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 # from keras.models import load_model
 import os
 
@@ -18,6 +18,9 @@ def ault():
 
 @app.route('/home', methods = ['POST'])
 def home():
+    img = request.files['image']
+    img.save('static/img/input/0.jpg')
+    
     return render_template('pred.html')
 
 
